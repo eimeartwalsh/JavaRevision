@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class CollegeCosts {
+    Scanner in = new Scanner(System.in);
 
     public static String getName() {
         // TODO
