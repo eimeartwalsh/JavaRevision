@@ -3,7 +3,8 @@ import java.util.Scanner;
 public class CollegeCosts {
     static Scanner in = new Scanner(System.in);
     public static void main() {
-        // TODO
+        String name = getName();
+        printTotal(name);
     }
 
     public static String getName() {
@@ -17,8 +18,22 @@ public class CollegeCosts {
         return in.nextLine();
     }
 
-    public static void totalCosts(String name) {
-        // TODO
+    public static void printTotal(String name) {
+        double totalCosts = 0;
+        if (onCampus(name)) {
+            totalCosts = calculateCostsWithCampusAccom(livingExpenses(), academicSupplies(), creditHours(), costPerCredit());
+        }
+        else {
+            totalCosts = calculateCostsWithoutCampusAccom(academicSupplies(), creditHours(), costPerCredit());
+        }
+        String year = getYear();
+        if (year.equalsIgnoreCase("other"))
+            System.out.printf("The total cost for "+name+" is $%7.2f", totalCosts);
+        else
+            System.out.printf("The total cost for "+name+" as a "+year+
+                    " is $%7.2f", totalCosts);
+        System.out.println();
+
     }
 
     public static boolean onCampus(String name) {
