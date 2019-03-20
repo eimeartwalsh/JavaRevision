@@ -1,14 +1,19 @@
 import java.util.Scanner;
 
 public class CollegeCosts {
-    Scanner in = new Scanner(System.in);
-
-    public static String getName() {
+    static Scanner in = new Scanner(System.in);
+    public static void main() {
         // TODO
     }
 
+    public static String getName() {
+        System.out.println("Enter student name: ");
+        return in.nextLine();
+    }
+
     public static String getYear() {
-        // TODO
+        System.out.println("Year of study (First, Second, Third, Fourth, Postgraduate)? ");
+        return in.nextLine();
     }
 
     public static void totalCosts(String name) {
