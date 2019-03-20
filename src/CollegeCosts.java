@@ -63,8 +63,14 @@ public class CollegeCosts {
         return in.nextDouble();
     }
 
-    public static double calculateCosts() {
-        // TODO
+    public static double calculateCostsWithCampusAccom(double expenses, double supplies, double credits, double cost ) {
+        return expenses + supplies + (credits * cost);
+
     }
 
-}
+    public static double calculateCostsWithoutCampusAccom(double supplies, double credits, double cost) {
+        return supplies + (credits * cost);
+    }
+
+
+    }
