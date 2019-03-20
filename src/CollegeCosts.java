@@ -8,7 +8,8 @@ public class CollegeCosts {
 
     public static String getName() {
         System.out.println("Enter student name: ");
-        return in.nextLine();
+        String name = in.nextLine();
+        return name;
     }
 
     public static String getYear() {
@@ -20,8 +21,19 @@ public class CollegeCosts {
         // TODO
     }
 
-    public static boolean onCampus() {
-        // TODO
+    public static boolean onCampus(String name) {
+        boolean invalidResponse = true;
+        do {
+            System.out.println("Is " + name + " living on Campus? (yes/no)");
+            String response = in.nextLine();
+            if (response.equalsIgnoreCase("yes"))
+                return true;
+            else if (response.equalsIgnoreCase("no"))
+                return false;
+            else
+                System.out.println("Invalid response.");
+        } while (invalidResponse);
+        return false;
     }
 
 
