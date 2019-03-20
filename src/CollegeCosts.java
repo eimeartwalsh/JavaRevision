@@ -30,15 +30,18 @@ public class CollegeCosts {
     }
 
     public static double academicSupplies() {
-        // TODO
+        System.out.println("Enter estimated cost of books and other academic supplies: ");
+        return in.nextDouble();
     }
 
     public static int creditHours() {
-        // TODO
+        System.out.println("How many credit hours will be taken over the next academic year? ");
+        return in.nextInt();
     }
 
-    public static double creditCosts() {
-        // TODO
+    public static double costPerCredit() {
+        System.out.println("What is the cost per credit hour?");
+        return in.nextDouble();
     }
 
     public static double calculateCosts() {
