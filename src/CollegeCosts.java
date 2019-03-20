@@ -26,7 +26,14 @@ public class CollegeCosts {
 
 
     public static double livingExpenses() {
-        // TODO
+        System.out.println("How many weeks will you be staying on campus? ");
+        int lengthOfStay = in.nextInt();
+        System.out.println("What are your estimated weekly living expenses?");
+        double weeklyExpenses = in.nextDouble();
+        System.out.println("What is the estimated cost of room and board for the year?");
+        double roomAndBoard = in.nextDouble();
+        double expensesTotal = lengthOfStay * weeklyExpenses + roomAndBoard;
+        return expensesTotal;
     }
 
     public static double academicSupplies() {
